@@ -1,6 +1,6 @@
 {
   "name": "@silyze/kb-scanner-text",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Text implementation for DocumentScanner<T> for @silyze/kb",
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
