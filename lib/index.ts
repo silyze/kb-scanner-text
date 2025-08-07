@@ -4,7 +4,12 @@ import { DocumentScanner } from "@silyze/kb";
 import tiktoken, { TiktokenModel } from "tiktoken";
 
 function cleanup(text: string): string {
-  return text.replace(/\s+/g, " ").trim();
+  return text
+    .replace(/\r?\n/g, ";")
+    .replace(/\s+/g, " ")
+    .replace(/;+/g, ";")
+    .replace(/^\s*;+|;+\s*$/g, "")
+    .trim();
 }
 
 export type TextScannerConfig = {
