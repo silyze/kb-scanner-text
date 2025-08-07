@@ -9,6 +9,7 @@ function cleanup(text: string): string {
     .replace(/\s+/g, " ")
     .replace(/;+/g, ";")
     .replace(/^\s*;+|;+\s*$/g, "")
+    .replace(/;/g, "\n")
     .trim();
 }
 
